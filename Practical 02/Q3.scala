@@ -15,8 +15,7 @@ object Q3
     //To calculate tax
     def tax(Normalhrs : Int, OThrs : Int) : Double =
     {
-        if(totalPay(Normalhrs, OThrs) == totalPay(40, 30)) totalPay(Normalhrs, OThrs) * 0.12 
-        else 0
+         totalPay(Normalhrs, OThrs) * 0.12 
     }
 
     //To calculate take home salary

@@ -8,7 +8,7 @@ object Q2
         var d = 5
         var k = 4.3f
 
-        println(s"--b * a + c * d-- = ${(b + 1)* a + c * (d - 1)}")
+        println(s"--b * a + c * d-- = ${(b - 1)* a + c * (d - 1)}")
 
         println(s"a++ = ${a + 1}")
 
