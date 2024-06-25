@@ -13,19 +13,20 @@ object Q4
 
   def cost(price: Int): Int = 
   {
-    500+attendees(price) * 3
-  }
+    val currentProfit = profit(ticketPrice)
+    val profitIfIncreased = profit(ticketPrice + 5)
+    val profitIfDecreased = profit(ticketPrice - 5)
 
-  def profit(price: Int): Int = 
-  {
-    revenue(price) - cost(price)
-  }
-    
-    
-  def main(args: Array[String]): Unit = 
+    (currentProfit, profitIfIncreased, profitIfDecreased) match 
     {
-        print(profit(5), profit(10), profit(15), profit(20))
-        print(profit(25), profit(30), profit(35), profit(40))
+      case (c, i, d) if c > i && c > d => ticketPrice
+      case (c, i, d) if i > c && i > d => maxPrice(ticketPrice + 5)
+      case (c, i, d) if d > c && d > i => maxPrice(ticketPrice - 5)
     }
+  }
 
+  def main(args: Array[String]): Unit = 
+  {
+    println(s"Best ticket price is ${maxPrice(15)}")
+  }
 }
