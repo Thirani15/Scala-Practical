@@ -9,7 +9,7 @@ object Q3
   def main(args: Array[String]): Unit = 
   {
     val num1 = 15
-    val num2 = 23
+    val num2 = 33
     val result = mean(num1, num2)
     println(s"The mean of $num1 and $num2 is $result")
   }
