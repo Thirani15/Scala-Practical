@@ -32,8 +32,7 @@ object Q1
   {
     inv2.foldLeft(inv1) { case (acc, (id, product)) =>
       acc.get(id) match {
-        case Some(existingProduct) =>
-          acc + (id -> Product(
+        case Some(existingProduct) => acc + (id -> Product(
             name = existingProduct.name,
             quantity = existingProduct.quantity + product.quantity,
             price = Math.max(existingProduct.price, product.price)
